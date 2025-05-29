@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Atendimento Restaurante</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container my-4">
+            <h2 class="text-primary mb-4">Atendimento</h2>
+
+            <!-- Campo de Cliente -->
+            <div class="mb-3">
+                <label for="nomeCliente" class="form-label">Cliente</label>
+                <div class="position-relative">
+                    <input type="text" class="form-control" id="nomeCliente" placeholder="Digite o nome do cliente" autocomplete="off">
+                    <div id="sugestoesClientes" class="list-group position-absolute w-100 z-3" style="top: 100%; display: none;"></div>
+                </div>
+            </div>
+
+            <div class="row flex-column flex-md-row g-4">
+                <!-- Lista de Produtos -->
+                <div class="col-md-7" id="produtosContainer" style="max-height: 500px; overflow-y: auto;">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-3">
+                        <!-- Produtos via JS -->
+                    </div>
+                </div>
+
+                <!-- Itens do Atendimento -->
+                <div class="col-md-5">
+                    <h5 class="mb-3">Itens do Atendimento</h5>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-sm">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Qtd</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabelaItens"></tbody>
+                        </table>
+                    </div>
+
+                    <div class="text-end mb-3">
+                        <strong>Total Geral: R$ <span id="totalGeral">0.00</span></strong>
+                    </div>
+
+                    <button class="btn btn-success w-100" id="finalizarAtendimento">Finalizar Atendimento</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Pagamento -->
+        <div class="modal fade" id="modalPagamento" tabindex="-1" aria-labelledby="modalPagamentoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <form id="formPagamento" class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalPagamentoLabel">Formas de Pagamento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="pagamentosContainer"></div>
+
+                        <button type="button" id="adicionarPagamento" class="btn btn-outline-secondary mb-3 w-100">
+                            + Adicionar Forma de Pagamento
+                        </button>
+
+                        <div>
+                            <strong>Total a pagar: R$ <span id="totalGeralModal">0.00</span></strong><br />
+                            <strong>Total informado: R$ <span id="totalInformado">0.00</span></strong><br />
+                            <div class="text-end mt-2">
+                                <strong>Troco:</strong> R$ <span id="trocoValor">0.00</span>
+                            </div>
+                            <small id="avisoErro" class="text-danger d-block mt-2" style="display: none;">O total informado não bate com o total a pagar.</small>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary" id="confirmarPagamentoBtn" disabled>Confirmar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

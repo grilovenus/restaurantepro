@@ -1,0 +1,132 @@
+/* Fundo e fonte geral */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-bottom: 3rem;
+}
+
+/* Container do filtro */
+.container {
+    background: #fff;
+    border-radius: 15px;
+    padding: 2rem 2.5rem;
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+/* Título */
+h3 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #0d6efd;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Labels dos filtros */
+label {
+    font-weight: 600;
+    color: #495057;
+    letter-spacing: 0.03em;
+    margin-bottom: 0.3rem;
+    display: inline-block;
+}
+
+/* Inputs e selects dos filtros */
+input.form-control,
+select.form-select {
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input.form-control:focus,
+select.form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 6px rgba(13, 110, 253, 0.5);
+    outline: none;
+}
+
+/* Tabela estilizada */
+table#tabelaVendas {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    width: 100%;
+}
+
+table#tabelaVendas thead tr th {
+    background: #0d6efd;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px 10px 0 0;
+    font-weight: 700;
+    text-align: left;
+    letter-spacing: 0.05em;
+    user-select: none;
+}
+
+table#tabelaVendas tbody tr {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 12px;
+    transition: box-shadow 0.25s ease;
+}
+
+table#tabelaVendas tbody tr:hover {
+    box-shadow: 0 6px 18px rgba(13,110,253,0.2);
+}
+
+table#tabelaVendas tbody tr td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-bottom: none;
+    color: #444;
+    font-weight: 600;
+}
+
+/* Botão de excluir */
+table#tabelaVendas tbody tr td button {
+    background: #dc3545;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    font-weight: 600;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+table#tabelaVendas tbody tr td button:hover {
+    background: #a71d2a;
+}
+
+/* Mensagem de nenhuma venda */
+#nenhumaVenda {
+    margin-top: 1.8rem;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: #888;
+}
+
+/* Rodapé com totais */
+.row.mt-4 {
+    background: #fff;
+    border-radius: 15px;
+    padding: 1.6rem 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+    font-weight: 700;
+    color: #0d6efd;
+    font-size: 1.3rem;
+    user-select: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .row.mt-4 > div {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+}

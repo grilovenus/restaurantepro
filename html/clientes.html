@@ -1,0 +1,30 @@
+<div class="container my-4">
+    <h3 class="mb-4 text-primary fw-bold">Cadastro de Clientes</h3>
+
+    <form id="formCadastroCliente" class="mb-5 shadow-sm p-4 rounded bg-light border">
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <label for="nomeCliente" class="form-label fw-semibold">Nome</label>
+                <input type="text" class="form-control form-control-lg" id="nomeCliente" placeholder="Nome do cliente" required>
+            </div>
+            <div class="col-12 col-md-4">
+                <label for="telefoneCliente" class="form-label fw-semibold">Telefone</label>
+                <input type="tel" class="form-control form-control-lg" id="telefoneCliente" placeholder="(xx) xxxxx-xxxx" required>
+            </div>
+            <div class="col-12 col-md-4">
+                <label for="enderecoCliente" class="form-label fw-semibold">Endereço</label>
+                <input type="text" class="form-control form-control-lg" id="enderecoCliente" placeholder="Rua, número, bairro" required>
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex flex-column flex-sm-row justify-content-end gap-3">
+            <button type="reset" class="btn btn-outline-secondary px-4 py-2">Limpar</button>
+            <button type="submit" class="btn btn-primary px-4 py-2">Cadastrar Cliente</button>
+        </div>
+    </form>
+
+    <h4 class="mb-3 text-secondary fw-bold">Clientes Cadastrados</h4>
+    <ul id="listaClientes" class="list-group shadow-sm rounded-3">
+        <!-- Clientes serão adicionados aqui -->
+    </ul>
+</div>

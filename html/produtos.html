@@ -1,0 +1,39 @@
+<div class="container mt-5">
+    <h2 class="mb-4 text-primary fw-bold">Cadastro de Produtos</h2>
+
+    <form id="formProduto" class="mb-5 shadow p-4 rounded bg-light border">
+        <div class="row g-4 align-items-end">
+            <div class="col-12 col-md-4">
+                <label for="nomeProduto" class="form-label fw-semibold">Nome do Produto</label>
+                <input type="text" class="form-control" id="nomeProduto" placeholder="Nome do produto" required>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <label for="precoProduto" class="form-label fw-semibold">Preço (R$)</label>
+                <input type="text" class="form-control" id="precoProduto" placeholder="0,00" required>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <label class="form-label fw-semibold">Imagem do Produto</label>
+                <div class="input-group">
+                    <label class="input-group-text btn btn-outline-primary fw-semibold" for="imagemProduto">
+                        <i class="bi bi-camera me-1"></i> Foto
+                    </label>
+                    <input type="file" class="form-control d-none" id="imagemProduto" accept="image/*" required>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-2">
+                <button type="submit" class="btn btn-primary w-100 fw-semibold shadow-sm">
+                    <i class="bi bi-plus-circle me-1"></i> Adicionar
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <h3 class="mb-4 text-secondary fw-bold">Produtos Cadastrados</h3>
+
+    <div id="listaProdutos" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+        <!-- Produtos aparecerão aqui como cards -->
+    </div>
+</div>
